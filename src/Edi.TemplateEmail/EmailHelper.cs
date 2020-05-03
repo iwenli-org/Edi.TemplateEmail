@@ -159,7 +159,7 @@ namespace Edi.TemplateEmail
 
                     smtp.ServerCertificateValidationCallback = (s, c, h, e) => true;
                     await smtp.ConnectAsync(Settings.SmtpServer, Settings.SmtpServerPort,
-                        Settings.EnableSsl ? SecureSocketOptions.StartTls : SecureSocketOptions.Auto);
+                        Settings.EnableSsl ? SecureSocketOptions.SslOnConnect : SecureSocketOptions.Auto);
                     if (!string.IsNullOrEmpty(Settings.SmtpUserName))
                     {
                         await smtp.AuthenticateAsync(Settings.SmtpUserName, Settings.SmtpPassword);
