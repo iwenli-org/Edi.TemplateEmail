@@ -23,34 +23,6 @@ namespace Edi.TemplateEmail.TestConsole
         }
         static async Task Main(string[] args)
         {
-
-            //var message = new MimeMessage();
-            //message.From.Add(new MailboxAddress("open@iwenli.org"));
-            //message.To.Add(new MailboxAddress("234486036@qq.com"));
-
-            //message.Subject = "星期天去哪里玩？";
-
-            //message.Body = new TextPart("plain") { Text = "我想去故宫玩，如何" };
-
-            //using (var client = new SmtpClient())
-            //{
-            //    // For demo-purposes, accept all SSL certificates (in case the server supports STARTTLS)
-            //    client.ServerCertificateValidationCallback = (s, c, h, e) => true;
-
-            //    client.Connect("smtp.exmail.qq.com", 465, true);
-
-            //    // Note: since we don't have an OAuth2 token, disable
-            //    // the XOAUTH2 authentication mechanism.
-            //    client.AuthenticationMechanisms.Remove("XOAUTH2");
-
-            //    // Note: only needed if the SMTP server requires authentication
-            //    client.Authenticate("open@iwenli.org", "Zyl521+yx");
-
-            //    client.Send(message);
-            //    client.Disconnect(true);
-            //}
-
-
             var configuration = new ConfigurationBuilder()
                   .SetBasePath(Directory.GetCurrentDirectory())
                   .AddJsonFile("appsettings.json",
